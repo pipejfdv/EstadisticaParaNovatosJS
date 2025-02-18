@@ -12,7 +12,6 @@ document.getElementById("add").addEventListener('click',addElement);
 document.getElementById('analyze').addEventListener('click', statistics);
 const content = document.getElementById('content');
 
-
 //functions
 
 function statistics(){
@@ -48,13 +47,13 @@ function statistics(){
                 <div class="col-4 mt-3 d-flex justify-content-center">
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">Desviación Estandar Poblacional</span>
-                        <input  type="text" class="form-control disabled" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" disabled value="${Math.sqrt(standardDeviationPolation)}">
+                        <input  type="text" class="form-control disabled" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" disabled value="${Math.sqrt(standardDeviationPolation).toFixed(2)}">
                       </div>
                 </div>
                 <div class="col-4 mt-3 d-flex justify-content-center">
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">Desviación Estandar Muestra</span>
-                        <input type="text" class="form-control disabled" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" disabled value="${Math.sqrt(standardDeviationSample)}">
+                        <input type="text" class="form-control disabled" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" disabled value="${Math.sqrt(standardDeviationSample).toFixed(2)}">
                       </div>
                 </div>`
 }
