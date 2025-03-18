@@ -4,7 +4,11 @@ import { avg } from "./average.js";
 
 export let varianceP = 0;
 export let varianceM = 0;
-//functions
+//functions of differents formulates the variants
+
+/*
+* This formula does the sum of elements in the listElements and squares them, but the difference is when total numbers are subtracted and one.
+*/
 
 //population
 export function variancePolation(){
