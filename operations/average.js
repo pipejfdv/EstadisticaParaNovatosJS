@@ -8,6 +8,10 @@ export let avg = 0;
 
 //function average
 export function average(){
+    /*
+    * This function takes elements of "listElements" and adds elements. Then take the average.
+    * @Return float avg
+    */
     listElements.forEach( e => {
         //pass from text to number 
         sum = sum + Number(e);
