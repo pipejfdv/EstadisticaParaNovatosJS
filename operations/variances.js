@@ -8,6 +8,7 @@ export let varianceM = 0;
 
 /*
 * This formula does the sum of elements in the listElements and squares them, but the difference is when total numbers are subtracted and one.
+* @return: float with two decimals
 */
 
 //population
