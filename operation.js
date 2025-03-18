@@ -2,7 +2,7 @@
 import { average, avg } from "./operations/average.js";
 import { variancePolation, varianceSample,varianceM,varianceP } from "./operations/variances.js";
 
-//variables
+// array list of data 
 export const listElements = [];
 
 
@@ -12,9 +12,12 @@ document.getElementById("add").addEventListener('click',addElement);
 document.getElementById('analyze').addEventListener('click', statistics);
 const content = document.getElementById('content');
 
-//functions
+//function primary
 
 function statistics(){
+    /*
+    * When executing this fuction, it will do all operations necessary and finally do an insert the document HTML with the different results.
+    */
     average();
     variancePolation();
     varianceSample();
@@ -59,6 +62,10 @@ function statistics(){
 }
 
 function addElement(){
+    /*
+    * this fuction takes care of add data in the array "listElements" and clear the input
+    * @return Array listElement
+    */
     let newElement = data.value;
     listElements.push(newElement);
     data.value='';
