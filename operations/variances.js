@@ -1,9 +1,8 @@
-//imports
-import { listElements } from "../operation.js";
-import { avg } from "./average.js";
+// Description: It has the functions to calculate the variance of a population and a sample.
+// Used in: operations/operations.js
 
-export let varianceP = 0;
-export let varianceM = 0;
+let varianceP = 0;
+let varianceM = 0;
 //functions of differents formulates the variants
 
 /*
@@ -12,24 +11,25 @@ export let varianceM = 0;
 */
 
 //population
-export function variancePolation(){
+export function variancePolation(data, fncAverage){
     let sum = 0;
-    listElements.forEach(element=> {
-        sum += (Number(element) - avg)**2;
+    data.forEach(element=> {
+        sum += (Number(element) - fncAverage(data))**2;
     });
     
-    varianceP = sum / listElements.length;
-    console.log(listElements.length);
+    varianceP = sum / data.length;
+    console.log(data.length);
     console.log("varianza population:" +varianceP.toFixed(2));
     return varianceP.toFixed(2);
 }
+
 //sample
-export function varianceSample(){
+export function varianceSample(data, fncAverage){
     let sum = 0;
-    listElements.forEach(element => {
-        sum += (Number(element) - avg) ** 2;
+    data.forEach(element => {
+        sum += (Number(element) - fncAverage(data)) ** 2;
     });
-    varianceM = sum / (listElements.length - 1);
+    varianceM = sum / (data.length - 1);
     console.log("Varianza muestra: " + varianceM.toFixed(2));
     return varianceM.toFixed(2);
 }

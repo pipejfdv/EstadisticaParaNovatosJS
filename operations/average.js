@@ -1,22 +1,19 @@
-//fuction about calculate the average
-import { listElements } from "../operation.js";
-
 //variables
 export let sum = 0;
 export let avg = 0;
 //let sum more ram
 
 //function average
-export function average(){
+export function average(data){
     /*
-    * This function takes elements of "listElements" and adds elements. Then take the average.
+    * This function takes a list of number elements floating or integers and returns the average.
     * @return float avg
     */
-    listElements.forEach( e => {
+    data.forEach( e => {
         //pass from text to number 
         sum = sum + Number(e);
     });
-    avg = sum/listElements.length;
+    avg = sum/data.length;
     return avg;
 }
 
